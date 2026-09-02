@@ -3,12 +3,10 @@
 # This is a list of subscription sources, with one subscription address per line
 # Supports setting UA: https://xxx.com/subscribe.m3u UA="xxx"
 
-# 2026-09-02 添加的验证存活源（婉柠）
-https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/index.m3u
+# 普通订阅源（参与测速，海外可达的会保留）
 https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/demo.m3u
-https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u
-https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u
 
 [WHITELIST]
-# 以下是订阅源的白名单，白名单内的订阅源获取的接口将不会参与测速，始终保留至结果最前。
-# This is the whitelist for subscription sources. Subscription sources in the whitelist will not participate in speed testing and will always be retained at the front of the results.
+# 白名单订阅源：其接口不参与测速，始终保留至结果最前
+# 2026-09-02 添加：itv.m3u = 189 个 cmvideo（咪咕全国CDN）IPv4 域名源，武汉可直接播
+https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/itv.m3u
