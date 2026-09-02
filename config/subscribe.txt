@@ -3,10 +3,12 @@
 # This is a list of subscription sources, with one subscription address per line
 # Supports setting UA: https://xxx.com/subscribe.m3u UA="xxx"
 
-# 普通订阅源（参与测速，海外可达的会保留）
-https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/demo.m3u
+# 普通订阅源（参与测速）
+# （留空：海外 runner 测速国内源会误杀，全部走白名单保留）
 
 [WHITELIST]
-# 白名单订阅源：其接口不参与测速，始终保留至结果最前
-# 2026-09-02 添加：itv.m3u = 189 个 cmvideo（咪咕全国CDN）IPv4 域名源，武汉可直接播
+# 白名单订阅源：其接口不参与测速，始终保留至结果最前（多源混合，提高命中率）
+# 1. itv.m3u：cmvideo 咪咕源 189 条（电信网络部分通道可播，如浙江卫视 ystenlive）
 https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/itv.m3u
+# 2. ipv6.m3u：fanmingming 主推混合源 82 条（含 cztv/nmtv/0472 等公网 CDN，IPv6 环境可用）
+https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u
